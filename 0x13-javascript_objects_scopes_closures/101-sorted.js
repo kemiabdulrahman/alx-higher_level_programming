@@ -6,7 +6,7 @@ const uniqueValues = [...new Set(values)];
 const Ndict = {};
 for (const j in uniqueValues) {
   const list = [];
-  for (const k in uniqueValues) {
+  for (const k in totallist) {
     if (totallist[k][1] === uniqueValues[j]) {
       list.unshift(totallist[k][0]);
     }
