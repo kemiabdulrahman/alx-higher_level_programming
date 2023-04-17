@@ -11,7 +11,7 @@ if __name__ == "__main__":
         database=sys.argv[3],
         port=3306)
     cursor = database.cursor()
-    cursor.execute("""SELECT * FROM states""")
+    cursor.execute("""SELECT * FROM states ORDER BY id ASC""")
     rows = cursor.fetchall()
     for i in rows:
         print(i)
