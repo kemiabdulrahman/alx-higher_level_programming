@@ -4,18 +4,18 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    database = MySQLdb.connect(
+    db = MySQLdb.connect(
         host="localhost",
         username=sys.argv[1],
         password=sys.argv[2],
-        database=sys.argv[3],
+        db=sys.argv[3],
         port=3306)
-    cursor = database.cursor()
-    cursor.execute(
+    curs = db.cursor()
+    curs.execute(
         """SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDE
         R BY states.id""")
-    rows = cursor.fetchall()
+    rows = curs.fetchall()
     for i in rows:
         print(i)
-    cursor.close()
-    database.close()
+    curs.close()
+    db.close()
