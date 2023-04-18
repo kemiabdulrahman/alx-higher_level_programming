@@ -12,9 +12,9 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    session = Session()
-    instance = session.query(State).first()
-    if instance is None:
+    sess = Session()
+    ins = sess.query(State).first()
+    if ins is None:
         print("Nothing")
     else:
-        print(instance.id, instance.name, sep=": ")
+        print(ins.id, ins.name, sep=": ")
