@@ -9,4 +9,3 @@ if __name__ == "__main__":
     print("Body response:")
     print("\t- type: {}".format(html.text.__class__))
     print("\t- content: {}".format(html.text))
-
