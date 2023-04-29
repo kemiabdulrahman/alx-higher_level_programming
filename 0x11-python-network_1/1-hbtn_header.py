@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A python script 
+"""A python script
 - that takes in a URL,
 - sends a request to the
 - pertaining to the X-Request-Id variable found in the header of the response.
