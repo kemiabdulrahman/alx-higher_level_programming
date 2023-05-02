@@ -22,4 +22,3 @@ def find_peak(list_of_integers):
         return find_peak(list_of_integers[mid_num:])
     if mid_num > 0 and list_of_integers[mid_num] < list_of_integers[mid_num - 1]:
         return find_peak(list_of_integers[:mid_num])
-
